@@ -6,7 +6,7 @@ module Wordpress
 
         self::ATTRIBUTE_MATCHES[api].each do |struct_attribute, item_attribute|
           value = struct[struct_attribute.to_s]
-          value = value.to_date if value.kind_of?XMLRPC::DateTime
+          value = value.to_date if value.kind_of? XMLRPC::DateTime
           content_item.send("#{item_attribute}=", value) unless value.nil?
         end
 
@@ -62,7 +62,8 @@ module Wordpress
                       :title,
                       :content,
                       :excerpt,
-                      :images
+                      :images,
+                      :categories
                       )
         attr_reader(:creation_date)
       end

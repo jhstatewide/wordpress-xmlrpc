@@ -9,7 +9,8 @@ module Wordpress
         :description    => :content,
         :mt_excerpt     => :excerpt,
         :dateCreated    => :creation_date,
-        :post_state     => :struct_published
+        :post_state     => :struct_published,
+        :categories     => :categories
       },
       :wp => {
       }
